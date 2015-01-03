@@ -48,17 +48,8 @@ public class NBClassifyReducer  extends Reducer<Text, Text, Text, Text> {
         context.getCounter(NBController.NB_COUNTERS.CORRECT_PREDICT).increment(1);
       } 
       StringBuilder out = new StringBuilder();
-      out.append(model_pos_num);
-      out.append("\t");
-      out.append(model_neg_num);
-      out.append("\t");
-      out.append(model_vacabulary_size);
-      out.append("\t");
-      out.append(pos_prob);
-      out.append("\t");
-      out.append(neg_prob);
-      out.append("\t");
-      out.append(predict);
+      out.append(model_pos_num + "\t" + model_neg_num + "\t" + model_vacabulary_size);
+      out.append("\t" + pos_prob + "\t" + neg_prob + "\t" + predict);
       // output <docid, predict>
       context.write(key, new Text(out.toString()));
     }
