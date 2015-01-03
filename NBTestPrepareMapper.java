@@ -1,4 +1,4 @@
-package com.ift.hadoop;
+package naivebayes;
 
 import java.io.IOException;
 import org.apache.hadoop.io.LongWritable;

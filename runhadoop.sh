@@ -12,7 +12,7 @@ do
   hdfs dfs -mv test/NEG-$j.csv review-in/
  fi
 a=`date +%s%N`
-hadoop jar NBClassifier.jar com.ift.hadoop.NBController -D train=review-in -D test=test -D output=reviewout -D reducer=20 -D result=result$i 
+hadoop jar NBClassifier.jar naivebayes.NBController -D train=review-in -D test=test -D output=reviewout -D reducer=20 -D result=result$i 
 b=`date +%s%N`
 t=`echo "scale=6; ($b-$a)/10^9" | bc`
 total_t=`echo "$total_t+$t" | bc`
