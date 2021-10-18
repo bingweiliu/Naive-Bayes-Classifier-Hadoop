@@ -3,7 +3,7 @@ for i in `seq 100 100 1000`
 do
 j=$(($i*1000))
 echo "--Start $j"
-cd /home/bingweiliu/NBClassifier
+cd ~/NBClassifier
 dataset/maketrial $j
 hdfs dfs -rm -skipTrash review-in/*
 hdfs dfs -rm -skipTrash test/*
