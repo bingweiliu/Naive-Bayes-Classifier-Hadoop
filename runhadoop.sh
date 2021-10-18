@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /home/bingweiliu/NBClassifier
+cd ~/NBClassifier
 total_t=0
 for i in {1..10}
 do
